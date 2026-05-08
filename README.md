@@ -20,7 +20,7 @@
 - 🗂️ **多级导航系统** - 专业分类、技术栈、项目类型三级导航
 - 🔍 **智能搜索** - 快速定位所需项目和技术栈
 - 📊 **项目展示** - 清晰展示项目信息、技术栈、难度等级
-- 📱 **响应式设计** - 完美支持桌面、平板、移动端
+- 📱 **响应式设计** - 完美支持桌面，平板、移动端
 - 🎨 **唯美UI** - 现代简洁的亮色调设计
 
 ### 🎨 视觉特色
@@ -36,8 +36,8 @@
 - 🤖 人工智能 - 机器学习、深度学习、NLP、计算机视觉
 - 🔐 网络安全 - 渗透测试、安全开发、密码学
 - 📡 物联网工程 - 嵌入式开发、智能家居
-- ☁️ 云计算 - 容器化、云原生、DevOps
-- 🎮 游戏开发 - Unity、Unreal、游戏AI
+- ☁️ 云计算 - 容器化，云原生、DevOps
+- 🎮 游戏开发 - Unity、Unreal，游戏AI
 - 📱 计算机基础 - 算法、操作系统、计算机网络
 
 #### 技术栈
@@ -74,12 +74,6 @@ npx serve .
 # 访问 http://localhost:8080
 ```
 
-### 方式三: GitHub Pages (推荐)
-项目已配置GitHub Pages,访问:
-```
-https://yourusername.github.io/final-year-project/
-```
-
 ---
 
 ## 📂 项目结构
@@ -99,13 +93,9 @@ final-year-project/
 │   └── js/
 │       └── main.js        # ⚙️ 交互逻辑
 │
-├── .github/
-│   └── workflows/
-│       └── deploy.yml     # 🚀 GitHub Actions部署配置
-│
 ├── .gitignore             # 📝 Git忽略配置
 ├── README.md              # 📖 项目说明(本文件)
-└── LICENSE                # 📄 MIT许可证
+└── LICENSE               # 📄 MIT许可证
 ```
 
 ---
@@ -123,12 +113,6 @@ final-year-project/
 - **Flexbox & Grid** - 现代布局系统
 - **CSS Animations** - 流畅交互动画
 - **Responsive Design** - 移动优先设计
-
-### 可选升级
-- [ ] React/Vue 版本
-- [ ] TypeScript 重构
-- [ ] PWA 支持
-- [ ] 国际化(i18n)
 
 ---
 
@@ -187,15 +171,17 @@ const navigationData = {
 
 ## 🚀 部署
 
-### GitHub Pages
-项目已配置自动部署,推送到main分支后自动生效:
+### 方式一: 直接上传
+将 `gradhub` 文件夹内容上传到任意Web服务器即可。
 
-```bash
-git push origin main
-# 访问 https://yourusername.github.io/final-year-project/
-```
+### 方式二: GitHub Pages
+1. 进入仓库 **Settings** → **Pages**
+2. Source 选择 `Deploy from a branch`
+3. Branch 选择 `main`，文件夹选择 `/ (root)`
+4. 点击 **Save**
+5. 等待部署完成，访问 `https://yourusername.github.io/final-year-project/`
 
-### Vercel / Netlify
+### 方式三: Vercel / Netlify
 ```bash
 # Vercel
 vercel --prod
@@ -204,9 +190,9 @@ vercel --prod
 netlify deploy --prod
 ```
 
-### 自定义域名
+### 方式四: 自定义域名
 1. 在GitHub仓库设置中添加自定义域名
-2. 创建 `CNAME` 文件
+2. 创建 `CNAME` 文件(内容为你的域名)
 3. 配置DNS解析
 
 ---
@@ -260,7 +246,7 @@ netlify deploy --prod
 ## 🙏 致谢
 
 - [Google Fonts](https://fonts.google.com/) - 提供了优质的字体
-- [GitHub](https://github.com/) - 代码托管和Pages服务
+- [GitHub](https://github.com/) - 代码托管服务
 - 所有贡献者和用户
 
 ---
