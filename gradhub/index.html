@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GradHub - 毕业项目导航站,为计算机专业学生提供毕业设计方向指引和项目参考">
+  <meta name="keywords" content="毕业设计,毕业项目,计算机专业,项目导航,开源项目">
+  <title>GradHub - 毕业项目导航站</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">跳到主要内容</a>
+
+  <header class="header">
+    <div class="header-container">
+      <a href="/" class="logo">
+        <div class="logo-icon">🎓</div>
+        <span>GradHub</span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="主导航">
+        <div class="nav-item">
+          <button class="nav-link" aria-expanded="false">
+            <span class="nav-link-icon">💻</span>
+            <span>专业分类</span>
+            <span>▼</span>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <div class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-item-icon">🖥️</div>
+              <div>
+                <div style="font-weight: 500;">计算机科学</div>
+                <div style="font-size: 12px; color: var(--color-text-tertiary);">软件工程、数据科学、AI</div>
+              </div>
+            </div>
+            <div class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-item-icon">📊</div>
+              <div>
+                <div style="font-weight: 500;">数据科学</div>
+                <div style="font-size: 12px; color: var(--color-text-tertiary);">数据分析、机器学习</div>
+              </div>
+            </div>
+            <div class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-item-icon">🤖</div>
+              <div>
+                <div style="font-weight: 500;">人工智能</div>
+                <div style="font-size: 12px; color: var(--color-text-tertiary);">CV、NLP、推荐系统</div>
+              </div>
+            </div>
+            <div class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-item-icon">🔐</div>
+              <div>
+                <div style="font-weight: 500;">网络安全</div>
+                <div style="font-size: 12px; color: var(--color-text-tertiary);">渗透测试、安全开发</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <button class="nav-link" aria-expanded="false">
+            <span class="nav-link-icon">🛠️</span>
+            <span>技术栈</span>
+            <span>▼</span>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <div class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-item-icon">⚛️</div>
+              <div>
+                <div style="font-weight: 500;">前端技术</div>
+                <div style="font-size: 12px; color: var(--color-text-tertiary);">React、Vue、Angular</div>
+              </div>
+            </div>
+            <div class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-item-icon">☕</div>
+              <div>
+                <div style="font-weight: 500;">后端技术</div>
+                <div style="font-size: 12px; color: var(--color-text-tertiary);">Java、Python、Go</div>
+              </div>
+            </div>
+            <div class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-item-icon">🗄️</div>
+              <div>
+                <div style="font-weight: 500;">数据库</div>
+                <div style="font-size: 12px; color: var(--color-text-tertiary);">MySQL、MongoDB、Redis</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <button class="nav-link" aria-expanded="false">
+            <span class="nav-link-icon">📦</span>
+            <span>项目类型</span>
+            <span>▼</span>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <div class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-item-icon">🌐</div>
+              <div>
+                <div style="font-weight: 500;">Web应用</div>
+                <div style="font-size: 12px; color: var(--color-text-tertiary);">企业级、电商、社交</div>
+              </div>
+            </div>
+            <div class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-item-icon">📱</div>
+              <div>
+                <div style="font-weight: 500;">移动应用</div>
+                <div style="font-size: 12px; color: var(--color-text-tertiary);">iOS、Android</div>
+              </div>
+            </div>
+            <div class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-item-icon">📈</div>
+              <div>
+                <div style="font-weight: 500;">数据分析</div>
+                <div style="font-size: 12px; color: var(--color-text-tertiary);">可视化、BI、报表</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#resources" class="nav-link">
+          <span class="nav-link-icon">📚</span>
+          <span>资源中心</span>
+        </a>
+      </nav>
+
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="search" class="search-input" placeholder="搜索项目、技术栈..." aria-label="搜索项目">
+      </div>
+
+      <div class="user-actions">
+        <button class="btn btn-primary btn-sm">
+          <span>✨</span>
+          <span>贡献项目</span>
+        </button>
+        <button class="mobile-menu-btn" aria-label="打开菜单" aria-expanded="false">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" id="main-content">
+    <section class="hero">
+      <div class="hero-container">
+        <h1 class="hero-title animate-fade-in-up">
+          🎯 找到你的毕业项目灵感
+        </h1>
+        <p class="hero-subtitle animate-fade-in-up delay-100">
+          专为计算机专业学生打造的毕业设计导航平台<br>
+          从选题到实现,一站式解决方案
+        </p>
+
+        <div class="hero-search animate-fade-in-up delay-200">
+          <div class="search-box" style="max-width: 100%;">
+            <span class="search-icon">🔍</span>
+            <input type="search" class="search-input input-lg" placeholder="例如:Java后端、Vue3、机器学习..." aria-label="搜索项目">
+          </div>
+        </div>
+
+        <div class="hero-tags animate-fade-in-up delay-300">
+          <span class="tag tag-primary">🔥 热门</span>
+          <span class="tag">Java后端</span>
+          <span class="tag">Vue3全栈</span>
+          <span class="tag">机器学习</span>
+          <span class="tag">小程序开发</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="content" id="majors">
+      <div class="content-container">
+        <div class="section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">🎯 专业分类</h2>
+              <p class="section-subtitle">根据你的专业方向,快速找到相关项目</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 grid-cols-2 grid-cols-3 grid-cols-4 stagger-animation">
+            <article class="category-card animate-fade-in-up">
+              <div class="category-card-icon">🖥️</div>
+              <h3 class="category-card-title">软件工程</h3>
+              <p class="category-card-description">Java后端、Web全栈、移动开发、软件测试</p>
+              <div class="category-card-count">128个项目</div>
+            </article>
+
+            <article class="category-card animate-fade-in-up">
+              <div class="category-card-icon">📊</div>
+              <h3 class="category-card-title">数据科学</h3>
+              <p class="category-card-description">数据分析、数据可视化、BI报表、大数据</p>
+              <div class="category-card-count">86个项目</div>
+            </article>
+
+            <article class="category-card animate-fade-in-up">
+              <div class="category-card-icon">🤖</div>
+              <h3 class="category-card-title">人工智能</h3>
+              <p class="category-card-description">机器学习、深度学习、NLP、计算机视觉</p>
+              <div class="category-card-count">152个项目</div>
+            </article>
+
+            <article class="category-card animate-fade-in-up">
+              <div class="category-card-icon">🔐</div>
+              <h3 class="category-card-title">网络安全</h3>
+              <p class="category-card-description">渗透测试、安全开发、密码学、网络攻防</p>
+              <div class="category-card-count">64个项目</div>
+            </article>
+
+            <article class="category-card animate-fade-in-up">
+              <div class="category-card-icon">📡</div>
+              <h3 class="category-card-title">物联网工程</h3>
+              <p class="category-card-description">嵌入式开发、传感器技术、智能家居</p>
+              <div class="category-card-count">48个项目</div>
+            </article>
+
+            <article class="category-card animate-fade-in-up">
+              <div class="category-card-icon">☁️</div>
+              <h3 class="category-card-title">云计算</h3>
+              <p class="category-card-description">虚拟化、容器化，云原生、DevOps</p>
+              <div class="category-card-count">72个项目</div>
+            </article>
+
+            <article class="category-card animate-fade-in-up">
+              <div class="category-card-icon">🎮</div>
+              <h3 class="category-card-title">游戏开发</h3>
+              <p class="category-card-description">Unity开发、Unreal引擎，游戏AI</p>
+              <div class="category-card-count">56个项目</div>
+            </article>
+
+            <article class="category-card animate-fade-in-up">
+              <div class="category-card-icon">📱</div>
+              <h3 class="category-card-title">计算机基础</h3>
+              <p class="category-card-description">算法实现、操作系统、计算机网络</p>
+              <div class="category-card-count">94个项目</div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content" id="popular-projects" style="background: var(--color-bg-secondary);">
+      <div class="content-container">
+        <div class="section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">🔥 热门毕业项目</h2>
+              <p class="section-subtitle">GitHub上最受欢迎的毕业设计项目</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 grid-cols-2 grid-cols-3 stagger-animation">
+            <article class="project-card animate-fade-in-up">
+              <div class="project-card-header">
+                <div class="project-card-icon">☕</div>
+                <div class="project-card-badges">
+                  <span class="badge badge-intermediate">进阶</span>
+                </div>
+              </div>
+              <h3 class="project-card-title">Spring Boot 企业博客系统</h3>
+              <p class="project-card-description">基于Spring Boot + Vue3的全栈博客系统,包含用户认证、文章管理、评论系统、标签分类等完整功能。</p>
+              <div class="project-card-tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Vue3</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-stats">
+                  <span class="project-card-stat"><span>⭐</span><span>1.2k</span></span>
+                  <span class="project-card-stat"><span>🍴</span><span>320</span></span>
+                </div>
+                <div class="project-card-actions">
+                  <button class="icon-btn" title="收藏"><span>🔖</span></button>
+                  <button class="icon-btn" title="分享"><span>🔗</span></button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card animate-fade-in-up">
+              <div class="project-card-header">
+                <div class="project-card-icon" style="background: var(--gradient-secondary);">📊</div>
+                <div class="project-card-badges">
+                  <span class="badge badge-beginner">入门</span>
+                </div>
+              </div>
+              <h3 class="project-card-title">Python 数据分析可视化平台</h3>
+              <p class="project-card-description">使用Python+Pandas+ECharts的数据分析平台,支持数据导入、清洗、可视化和报告生成。</p>
+              <div class="project-card-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">ECharts</span>
+                <span class="tag">Flask</span>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-stats">
+                  <span class="project-card-stat"><span>⭐</span><span>890</span></span>
+                  <span class="project-card-stat"><span>🍴</span><span>245</span></span>
+                </div>
+                <div class="project-card-actions">
+                  <button class="icon-btn" title="收藏"><span>🔖</span></button>
+                  <button class="icon-btn" title="分享"><span>🔗</span></button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card animate-fade-in-up">
+              <div class="project-card-header">
+                <div class="project-card-icon" style="background: var(--gradient-accent);">🤖</div>
+                <div class="project-card-badges">
+                  <span class="badge badge-advanced">高级</span>
+                </div>
+              </div>
+              <h3 class="project-card-title">基于BERT的中文情感分析系统</h3>
+              <p class="project-card-description">使用预训练BERT模型进行中文文本情感分析,支持在线预测和批量处理。</p>
+              <div class="project-card-tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">BERT</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Flask</span>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-stats">
+                  <span class="project-card-stat"><span>⭐</span><span>756</span></span>
+                  <span class="project-card-stat"><span>🍴</span><span>198</span></span>
+                </div>
+                <div class="project-card-actions">
+                  <button class="icon-btn" title="收藏"><span>🔖</span></button>
+                  <button class="icon-btn" title="分享"><span>🔗</span></button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card animate-fade-in-up">
+              <div class="project-card-header">
+                <div class="project-card-icon">⚛️</div>
+                <div class="project-card-badges">
+                  <span class="badge badge-intermediate">进阶</span>
+                </div>
+              </div>
+              <h3 class="project-card-title">React + TypeScript 后台管理系统</h3>
+              <p class="project-card-description">基于React18 + TypeScript + Ant Design的管理后台,包含权限管理、数据可视化等。</p>
+              <div class="project-card-tags">
+                <span class="tag">React</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Ant Design</span>
+                <span class="tag">Node.js</span>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-stats">
+                  <span class="project-card-stat"><span>⭐</span><span>2.1k</span></span>
+                  <span class="project-card-stat"><span>🍴</span><span>580</span></span>
+                </div>
+                <div class="project-card-actions">
+                  <button class="icon-btn" title="收藏"><span>🔖</span></button>
+                  <button class="icon-btn" title="分享"><span>🔗</span></button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card animate-fade-in-up">
+              <div class="project-card-header">
+                <div class="project-card-icon" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">🗄️</div>
+                <div class="project-card-badges">
+                  <span class="badge badge-beginner">入门</span>
+                </div>
+              </div>
+              <h3 class="project-card-title">MySQL 数据库原理演示系统</h3>
+              <p class="project-card-description">交互式数据库学习系统,可视化展示SQL执行过程、索引原理、事务隔离级别。</p>
+              <div class="project-card-tags">
+                <span class="tag">MySQL</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Canvas</span>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-stats">
+                  <span class="project-card-stat"><span>⭐</span><span>634</span></span>
+                  <span class="project-card-stat"><span>🍴</span><span>156</span></span>
+                </div>
+                <div class="project-card-actions">
+                  <button class="icon-btn" title="收藏"><span>🔖</span></button>
+                  <button class="icon-btn" title="分享"><span>🔗</span></button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card animate-fade-in-up">
+              <div class="project-card-header">
+                <div class="project-card-icon" style="background: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%);">📱</div>
+                <div class="project-card-badges">
+                  <span class="badge badge-intermediate">进阶</span>
+                </div>
+              </div>
+              <h3 class="project-card-title">微信小程序校园二手交易平台</h3>
+              <p class="project-card-description">校园二手交易小程序,包含商品发布、搜索、聊天、支付等功能模块。</p>
+              <div class="project-card-tags">
+                <span class="tag">微信小程序</span>
+                <span class="tag">云开发</span>
+                <span class="tag">云数据库</span>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-stats">
+                  <span class="project-card-stat"><span>⭐</span><span>567</span></span>
+                  <span class="project-card-stat"><span>🍴</span><span>142</span></span>
+                </div>
+                <div class="project-card-actions">
+                  <button class="icon-btn" title="收藏"><span>🔖</span></button>
+                  <button class="icon-btn" title="分享"><span>🔗</span></button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content" id="resources" style="background: var(--color-bg-secondary);">
+      <div class="content-container">
+        <div class="section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">📚 资源中心</h2>
+              <p class="section-subtitle">学习路径、工具推荐、论文模板</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 grid-cols-2 grid-cols-4 stagger-animation">
+            <article class="card animate-fade-in-up hover-lift">
+              <div style="font-size: 48px; margin-bottom: var(--spacing-md);">🛤️</div>
+              <h3 style="font-size: var(--text-xl); font-weight: 600; margin-bottom: var(--spacing-sm);">学习路径</h3>
+              <p style="font-size: var(--text-sm); color: var(--color-text-secondary); margin-bottom: var(--spacing-md);">
+                从零基础到就业的完整学习路线图,包含每个阶段的学习目标和推荐资源。
+              </p>
+              <a href="#" class="btn btn-secondary btn-sm">查看路线 →</a>
+            </article>
+
+            <article class="card animate-fade-in-up hover-lift">
+              <div style="font-size: 48px; margin-bottom: var(--spacing-md);">🧰</div>
+              <h3 style="font-size: var(--text-xl); font-weight: 600; margin-bottom: var(--spacing-sm);">工具合集</h3>
+              <p style="font-size: var(--text-sm); color: var(--color-text-secondary); margin-bottom: var(--spacing-md);">
+                开发、测试、部署必备工具推荐,包括IDE、版本控制、协作平台等。
+              </p>
+              <a href="#" class="btn btn-secondary btn-sm">探索工具 →</a>
+            </article>
+
+            <article class="card animate-fade-in-up hover-lift">
+              <div style="font-size: 48px; margin-bottom: var(--spacing-md);">📄</div>
+              <h3 style="font-size: var(--text-xl); font-weight: 600; margin-bottom: var(--spacing-sm);">论文模板</h3>
+              <p style="font-size: var(--text-sm); color: var(--color-text-secondary); margin-bottom: var(--spacing-md);">
+                标准化的毕业论文模板,包含封面、目录、章节结构、参考文献格式等。
+              </p>
+              <a href="#" class="btn btn-secondary btn-sm">下载模板 →</a>
+            </article>
+
+            <article class="card animate-fade-in-up hover-lift">
+              <div style="font-size: 48px; margin-bottom: var(--spacing-md);">💡</div>
+              <h3 style="font-size: var(--text-xl); font-weight: 600; margin-bottom: var(--spacing-sm);">选题建议</h3>
+              <p style="font-size: var(--text-sm); color: var(--color-text-secondary); margin-bottom: var(--spacing-md);">
+                历年优秀毕业设计选题汇总,以及如何选择有创新点的题目。
+              </p>
+              <a href="#" class="btn btn-secondary btn-sm">查看选题 →</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4 class="footer-title">关于 GradHub</h4>
+          <p style="font-size: var(--text-sm); color: var(--color-text-secondary); line-height: var(--leading-relaxed);">
+            GradHub 是一个为计算机专业学生设计的毕业项目导航平台,致力于帮助学生快速找到适合自己的毕业设计方向和参考项目。
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">快速链接</h4>
+          <div class="footer-links">
+            <a href="#" class="footer-link">专业分类</a>
+            <a href="#" class="footer-link">技术栈导航</a>
+            <a href="#" class="footer-link">项目类型</a>
+            <a href="#" class="footer-link">资源中心</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">贡献指南</h4>
+          <div class="footer-links">
+            <a href="#" class="footer-link">如何贡献</a>
+            <a href="#" class="footer-link">项目规范</a>
+            <a href="#" class="footer-link">提交项目</a>
+            <a href="#" class="footer-link">联系我们</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">关注我们</h4>
+          <div class="footer-links">
+            <a href="#" class="footer-link">GitHub</a>
+            <a href="#" class="footer-link">Gitee</a>
+            <a href="#" class="footer-link">微信公众号</a>
+            <a href="#" class="footer-link">Bilibili</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 GradHub. 基于开源精神,为学生而生。</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-overlay"></div>
+  <aside class="mobile-sidebar">
+    <div class="mobile-sidebar-header">
+      <div class="logo">
+        <div class="logo-icon">🎓</div>
+        <span>GradHub</span>
+      </div>
+      <button class="mobile-sidebar-close" aria-label="关闭菜单">✕</button>
+    </div>
+    <div class="mobile-sidebar-content">
+      <nav class="sidebar-nav" style="gap: var(--spacing-md);">
+        <a href="#" class="sidebar-link active">
+          <span>🏠</span>
+          <span>首页</span>
+        </a>
+        <a href="#majors" class="sidebar-link">
+          <span>💻</span>
+          <span>专业分类</span>
+        </a>
+        <a href="#" class="sidebar-link">
+          <span>🛠️</span>
+          <span>技术栈</span>
+        </a>
+        <a href="#" class="sidebar-link">
+          <span>📦</span>
+          <span>项目类型</span>
+        </a>
+        <a href="#resources" class="sidebar-link">
+          <span>📚</span>
+          <span>资源中心</span>
+        </a>
+      </nav>
+
+      <div style="margin-top: var(--spacing-xl); padding-top: var(--spacing-xl); border-top: 1px solid var(--color-border);">
+        <button class="btn btn-primary" style="width: 100%;">
+          <span>✨</span>
+          <span>贡献项目</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

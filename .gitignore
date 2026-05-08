@@ -1,0 +1,63 @@
+# GradHub - GitIgnore Configuration
+
+# ============ 系统文件 ============
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ============ 编辑器 ============
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ============ 日志和临时文件 ============
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tmp
+*.temp
+
+# ============ 依赖 ============
+node_modules/
+package-lock.json
+yarn.lock
+
+# ============ Python ============
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv/
+
+# ============ 构建产物 ============
+dist/
+build/
+*.egg-info/
+*.egg
+
+# ============ 测试覆盖率 ============
+coverage/
+htmlcov/
+.coverage
+
+# ============ 环境变量 ============
+.env
+.env.local
+.env.*.local
+
+# ============ 其他 ============
+*.bak
+*.orig
+*.log
+*.tmp
+.DS_Store
