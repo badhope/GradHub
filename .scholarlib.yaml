@@ -1,0 +1,38 @@
+name: ScholarLib-EM
+description: Curated open-access research papers in Economics & Management
+url: https://github.com/badhope/ScholarLib-EM
+
+# Repository settings
+owner: badhope
+repo: ScholarLib-EM
+
+# Paper categories
+categories:
+  - microeconomics
+  - macroeconomics
+  - finance
+  - accounting
+  - marketing
+  - strategic-management
+  - operations-management
+  - innovation-entrepreneurship
+  - human-resources
+  - public-economics
+
+# Year range
+years:
+  - 2020
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+
+# Paper entry format
+paper_format:
+  - "{paper-name}.pdf"
+  - "{paper-name}.bib"
+  - "metadata.json"
+
+# License
+license: MIT
