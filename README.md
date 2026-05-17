@@ -6,9 +6,9 @@
 
 *A curated, open-access collection of research papers in Economics & Management — browse, download, and cite. Stop digging, start writing.*
 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Paper Count](https://img.shields.io/badge/Papers-Growing-green.svg)](papers/)
+[![Paper Count](https://img.shields.io/badge/Papers-10%2B-green.svg)](papers/)
 
 [English](#english) · [中文](#中文)
 
@@ -26,36 +26,56 @@
 
 ### 📂 How Papers Are Organized
 
+Papers are organized by **Year → Field → Journal Tier**:
+
 ```
 papers/
-├── 2020/                          # By publication year
-│   ├── microeconomics/            # By research field
-│   │   ├── paper-name/
-│   │   │   ├── paper-name.pdf     # Full-text PDF
-│   │   │   ├── paper-name.bib     # BibTeX citation (copy-paste ready)
-│   │   │   └── metadata.json      # Title, authors, abstract, DOI, keywords
-│   │   └── ...
-│   ├── macroeconomics/
+├── 2020-2025/                     # By publication year
+│   └── {field}/                   # By research field
+│       └── paper-name/
+│           ├── paper-name.bib     # BibTeX citation (copy-paste ready)
+│           └── metadata.json      # Title, authors, abstract, DOI, keywords
+│
+├── 2026/                          # Latest papers — enhanced structure
+│   ├── microeconomics/
+│   │   ├── FT50-UTD24/           # 🏆 Financial Times Top 50 & UTD 24
+│   │   ├── SSCI-Q1/              # SSCI Q1 journals
+│   │   ├── SCI-Q1/               # SCI Q1 journals
+│   │   ├── CSSCI/                # 中文社会科学引文索引
+│   │   └── Other-Top/            # ABS 3/4, ABDC A*, etc.
 │   ├── finance/
-│   ├── accounting/
-│   ├── marketing/
-│   ├── strategic-management/
-│   ├── operations-management/
-│   ├── innovation-entrepreneurship/
 │   ├── human-resources/
-│   └── public-economics/
-├── 2021/
-├── 2022/
-├── 2023/
-├── 2024/
-└── 2025/
+│   │   ├── FT50-UTD24/           # AMJ, JAP, ASQ, Personnel Psychology...
+│   │   │   ├── ceo-pay-ratios-income-inequality-wellbeing/
+│   │   │   ├── generative-ai-creativity-field-experiment/
+│   │   │   ├── passion-contagion-differentiated-theory/
+│   │   │   └── relationship-splintering-repair-marginalization/
+│   │   ├── SSCI-Q1/              # HRM, JOB, JVB, Leadership Quarterly...
+│   │   │   ├── ai-double-edged-sword-service-performance/
+│   │   │   ├── common-good-hrm-meaningfulness-thriving/
+│   │   │   ├── meta-analysis-flexible-working-arrangements/
+│   │   │   ├── meta-analysis-hr-attributions-hpws/
+│   │   │   ├── star-advantage-employee-value-ai/
+│   │   │   └── work-family-conflict-career-outcomes/
+│   │   └── ...
+│   └── ...
 ```
+
+### 🏅 Journal Tier System (2026+)
+
+| Tier | Description | Examples |
+|------|-------------|----------|
+| **FT50-UTD24** 🏆 | Financial Times Top 50 & UTD Dallas 24 | AMJ, AMR, ASQ, JAP, SMJ, JIBS, Personnel Psychology |
+| **SSCI-Q1** | SSCI Q1 (Social Sciences, top quartile) | HRM, JOB, JVB, Human Relations, Leadership Quarterly |
+| **SCI-Q1** | SCI Q1 (Science, top quartile) | Journal of Vocational Behavior, Work & Stress |
+| **CSSCI** | 中文社会科学引文索引 | 管理世界, 南开管理评论, 心理学报, 管理科学学报 |
+| **Other-Top** | Other highly regarded journals | ABS 3/4, ABDC A*, Scopus Q1 |
 
 ### 🚀 Quick Start
 
-1. **Find your paper** → Browse `papers/{year}/{field}/` or use `Ctrl+F` / `GitHub Search`
+1. **Find your paper** → Browse `papers/{year}/{field}/{tier}/` or use `Ctrl+F` / `GitHub Search`
 2. **Grab the citation** → Open the `.bib` file and copy the BibTeX entry into your LaTeX/BibTeX bibliography
-3. **Download the PDF** → Click the `.pdf` file to download directly
+3. **Access the paper** → Click the DOI link in `metadata.json` to access the full text
 4. **Done** ✅ — Back to writing!
 
 ### 📋 Research Fields Covered
@@ -83,7 +103,7 @@ We welcome contributions! If you have a paper to share:
 
 ### 📜 License
 
-This collection is released under the [CC BY-NC-SA 4.0](LICENSE) license. Individual papers retain their original copyright.
+This collection is released under the [MIT](LICENSE) license. Individual papers retain their original copyright.
 
 ---
 
@@ -97,36 +117,51 @@ This collection is released under the [CC BY-NC-SA 4.0](LICENSE) license. Indivi
 
 ### 📂 论文如何组织
 
+论文按 **年份 → 领域 → 期刊等级** 三级分类：
+
 ```
 papers/
-├── 2020/                          # 按发表年份
-│   ├── microeconomics/            # 按研究领域
-│   │   ├── paper-name/
-│   │   │   ├── paper-name.pdf     # 论文全文 PDF
-│   │   │   ├── paper-name.bib     # BibTeX 引用（直接复制使用）
-│   │   │   └── metadata.json      # 标题、作者、摘要、DOI、关键词
-│   │   └── ...
-│   ├── macroeconomics/            # 宏观经济学
-│   ├── finance/                   # 金融学
-│   ├── accounting/                # 会计学
-│   ├── marketing/                 # 市场营销
-│   ├── strategic-management/      # 战略管理
-│   ├── operations-management/     # 运营管理
-│   ├── innovation-entrepreneurship/ # 创新与创业
+├── 2020-2025/                     # 按发表年份
+│   └── {领域}/                    # 按研究领域
+│       └── 论文名称/
+│           ├── paper-name.bib     # BibTeX 引用（直接复制使用）
+│           └── metadata.json      # 标题、作者、摘要、DOI、关键词
+│
+├── 2026/                          # 最新论文 — 增强版分类
 │   ├── human-resources/           # 人力资源管理
-│   └── public-economics/          # 公共经济学
-├── 2021/
-├── 2022/
-├── 2023/
-├── 2024/
-└── 2025/
+│   │   ├── FT50-UTD24/           # 🏆 金融时报50本 + UTD24顶级期刊
+│   │   │   ├── ceo-pay-ratios-income-inequality-wellbeing/  # JIBS
+│   │   │   ├── generative-ai-creativity-field-experiment/   # JAP
+│   │   │   ├── passion-contagion-differentiated-theory/      # ASQ
+│   │   │   └── relationship-splintering-repair-marginalization/ # AMJ
+│   │   ├── SSCI-Q1/              # SSCI 一区期刊
+│   │   │   ├── ai-double-edged-sword-service-performance/    # JOB
+│   │   │   ├── common-good-hrm-meaningfulness-thriving/      # HRM
+│   │   │   ├── meta-analysis-flexible-working-arrangements/  # JOB
+│   │   │   ├── meta-analysis-hr-attributions-hpws/           # HRM
+│   │   │   ├── star-advantage-employee-value-ai/             # HRM
+│   │   │   └── work-family-conflict-career-outcomes/         # JVB
+│   │   ├── SCI-Q1/               # SCI 一区期刊
+│   │   ├── CSSCI/                # 中文社会科学引文索引
+│   │   └── Other-Top/            # ABS 3/4, ABDC A* 等
+│   └── ...
 ```
+
+### 🏅 期刊等级体系（2026年起）
+
+| 等级 | 说明 | 代表期刊 |
+|------|------|---------|
+| **FT50-UTD24** 🏆 | 金融时报50本 + UTD 24本 | AMJ, AMR, ASQ, JAP, SMJ, JIBS, Personnel Psychology |
+| **SSCI-Q1** | SSCI 一区（社会科学引文索引） | HRM, JOB, JVB, Human Relations, Leadership Quarterly |
+| **SCI-Q1** | SCI 一区（科学引文索引） | Journal of Vocational Behavior, Work & Stress |
+| **CSSCI** | 中文社会科学引文索引 | 管理世界, 南开管理评论, 心理学报, 管理科学学报 |
+| **Other-Top** | 其他权威期刊 | ABS 3/4, ABDC A*, Scopus Q1 |
 
 ### 🚀 快速使用
 
-1. **找论文** → 浏览 `papers/{年份}/{领域}/` 或使用搜索功能
+1. **找论文** → 浏览 `papers/{年份}/{领域}/{期刊等级}/` 或使用搜索功能
 2. **取引用** → 打开 `.bib` 文件，复制 BibTeX 条目到你的参考文献库
-3. **下载 PDF** → 点击 `.pdf` 文件直接下载
+3. **读全文** → 点击 `metadata.json` 中的 DOI 链接访问论文全文
 4. **完成** ✅ — 继续写论文！
 
 ### 📋 涵盖的研究领域
@@ -154,7 +189,7 @@ papers/
 
 ### 📜 许可证
 
-本论文库采用 [CC BY-NC-SA 4.0](LICENSE) 许可证发布。各篇论文保留其原始版权。
+本论文库采用 [MIT](LICENSE) 许可证发布。各篇论文保留其原始版权。
 
 ---
 
