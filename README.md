@@ -8,7 +8,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Paper Count](https://img.shields.io/badge/Papers-10%2B-green.svg)](papers/)
+[![Paper Count](https://img.shields.io/badge/Papers-20%2B-green.svg)](papers/)
+[![Fields](https://img.shields.io/badge/Fields-18-blue.svg)](#-research-fields-covered)
 
 [English](#english) · [中文](#中文)
 
@@ -26,84 +27,133 @@
 
 ### 📂 How Papers Are Organized
 
-Papers are organized by **Year → Field → Journal Tier**:
+Papers are organized by **5 levels**: `Year → Field → Topic → Journal Tier → Method`
 
 ```
 papers/
-├── 2020-2025/                     # By publication year
-│   └── {field}/                   # By research field
-│       └── paper-name/
-│           ├── paper-name.bib     # BibTeX citation (copy-paste ready)
-│           └── metadata.json      # Title, authors, abstract, DOI, keywords
+├── 2020-2025/                          # Legacy: Year → Field → Paper
 │
-├── 2026/                          # Latest papers — enhanced structure
-│   ├── microeconomics/
-│   │   ├── FT50-UTD24/           # 🏆 Financial Times Top 50 & UTD 24
-│   │   ├── SSCI-Q1/              # SSCI Q1 journals
-│   │   ├── SCI-Q1/               # SCI Q1 journals
-│   │   ├── CSSCI/                # 中文社会科学引文索引
-│   │   └── Other-Top/            # ABS 3/4, ABDC A*, etc.
-│   ├── finance/
-│   ├── human-resources/
-│   │   ├── FT50-UTD24/           # AMJ, JAP, ASQ, Personnel Psychology...
-│   │   │   ├── ceo-pay-ratios-income-inequality-wellbeing/
-│   │   │   ├── generative-ai-creativity-field-experiment/
-│   │   │   ├── passion-contagion-differentiated-theory/
-│   │   │   └── relationship-splintering-repair-marginalization/
-│   │   ├── SSCI-Q1/              # HRM, JOB, JVB, Leadership Quarterly...
-│   │   │   ├── ai-double-edged-sword-service-performance/
-│   │   │   ├── common-good-hrm-meaningfulness-thriving/
-│   │   │   ├── meta-analysis-flexible-working-arrangements/
-│   │   │   ├── meta-analysis-hr-attributions-hpws/
-│   │   │   ├── star-advantage-employee-value-ai/
-│   │   │   └── work-family-conflict-career-outcomes/
-│   │   └── ...
-│   └── ...
+├── 2026/                               # Enhanced 5-level structure
+│   ├── {field}/                        # 18 research fields
+│   │   ├── {topic}/                    # 3-5 topics per field
+│   │   │   ├── {journal-tier}/         # 5 journal tiers
+│   │   │   │   ├── {method}/           # 5 research methods
+│   │   │   │   │   └── {paper-name}/   # Paper entry
+│   │   │   │   │       ├── paper-name.bib
+│   │   │   │   │       └── metadata.json
+│   │   │   │   │
+│   │   │   │   ├── FT50-UTD24/        # 🏆 AMJ, JAP, ASQ, SMJ...
+│   │   │   │   ├── SSCI-Q1/           # HRM, JOB, JVB...
+│   │   │   │   ├── SCI-Q1/            # JVB, Work & Stress...
+│   │   │   │   ├── CSSCI/             # 管理世界, 南开管理评论...
+│   │   │   │   └── Other-Top/         # ABS 3/4, ABDC A*...
+│   │   │   │
+│   │   │   │   ├── empirical/         # Empirical studies
+│   │   │   │   ├── theoretical/       # Theory building
+│   │   │   │   ├── meta-analysis/     # Meta-analyses
+│   │   │   │   ├── review/            # Literature reviews
+│   │   │   │   └── experimental/      # Experiments
+│
+│   ├── human-resources/               # Example: most populated field
+│   │   ├── ai-work/                   # AI & Work
+│   │   │   ├── FT50-UTD24/experimental/
+│   │   │   │   └── generative-ai-creativity-field-experiment/  # JAP
+│   │   │   └── SSCI-Q1/empirical/
+│   │   │       ├── ai-double-edged-sword-service-performance/  # JOB
+│   │   │       └── star-advantage-employee-value-ai/           # HRM
+│   │   ├── leadership/                # Leadership
+│   │   ├── compensation-rewards/      # Compensation & Rewards
+│   │   ├── diversity-dei/             # Diversity, Equity & Inclusion
+│   │   ├── employee-wellbeing/        # Employee Wellbeing
+│   │   └── talent-management/         # Talent Management
+│   │
+│   ├── finance/                       # Finance
+│   │   ├── corporate-finance/
+│   │   ├── asset-pricing/
+│   │   ├── derivatives/
+│   │   ├── fintech/
+│   │   └── financial-markets/
+│   │
+│   ├── digital-economy/               # 🆕 Digital Economy
+│   │   ├── platform-economy/
+│   │   ├── e-commerce/
+│   │   ├── digital-transformation/
+│   │   └── data-economy/
+│   │
+│   ├── esg-sustainability/            # 🆕 ESG & Sustainability
+│   │   ├── corporate-social-responsibility/
+│   │   ├── green-finance/
+│   │   ├── sustainable-supply-chain/
+│   │   └── climate-risk/
+│   │
+│   ├── behavioral-economics/          # 🆕 Behavioral Economics
+│   ├── labor-economics/               # 🆕 Labor Economics
+│   ├── international-business/        # 🆕 International Business
+│   ├── health-economics/              # 🆕 Health Economics
+│   ├── tourism-hospitality/           # 🆕 Tourism & Hospitality
+│   ├── real-estate-urban-economics/   # 🆕 Real Estate & Urban Econ
+│   └── ... (18 fields total)
 ```
 
-### 🏅 Journal Tier System (2026+)
+### 🏅 Journal Tier System
 
 | Tier | Description | Examples |
 |------|-------------|----------|
-| **FT50-UTD24** 🏆 | Financial Times Top 50 & UTD Dallas 24 | AMJ, AMR, ASQ, JAP, SMJ, JIBS, Personnel Psychology |
-| **SSCI-Q1** | SSCI Q1 (Social Sciences, top quartile) | HRM, JOB, JVB, Human Relations, Leadership Quarterly |
-| **SCI-Q1** | SCI Q1 (Science, top quartile) | Journal of Vocational Behavior, Work & Stress |
-| **CSSCI** | 中文社会科学引文索引 | 管理世界, 南开管理评论, 心理学报, 管理科学学报 |
+| **FT50-UTD24** 🏆 | Financial Times Top 50 & UTD Dallas 24 | AMJ, AMR, ASQ, JAP, SMJ, JIBS |
+| **SSCI-Q1** | SSCI Q1 (Social Sciences, top quartile) | HRM, JOB, JVB, Human Relations, LQ |
+| **SCI-Q1** | SCI Q1 (Science, top quartile) | Journal of Vocational Behavior |
+| **CSSCI** | 中文社会科学引文索引 | 管理世界, 南开管理评论, 心理学报 |
 | **Other-Top** | Other highly regarded journals | ABS 3/4, ABDC A*, Scopus Q1 |
+
+### 🔬 Research Method Classification
+
+| Method | Description |
+|--------|-------------|
+| **empirical** | Quantitative/qualitative empirical studies using real-world data |
+| **theoretical** | Theory building, conceptual frameworks, mathematical models |
+| **meta-analysis** | Systematic meta-analyses and meta-analytic reviews |
+| **review** | Literature reviews, systematic reviews, critical analyses |
+| **experimental** | Lab experiments, field experiments, randomized controlled trials |
+
+### 📋 Research Fields Covered (18 Fields)
+
+| # | Field | Topics |
+|---|-------|--------|
+| 1 | **Microeconomics** | Consumer theory, industrial organization, game theory, behavioral experiments |
+| 2 | **Macroeconomics** | Monetary policy, economic growth, international trade, business cycles |
+| 3 | **Finance** | Corporate finance, asset pricing, derivatives, fintech, financial markets |
+| 4 | **Accounting** | Financial reporting, auditing, managerial accounting, ESG disclosure |
+| 5 | **Marketing** | Consumer behavior, digital marketing, branding, pricing strategy |
+| 6 | **Strategic Management** | Competitive strategy, corporate governance, M&A, business model innovation |
+| 7 | **Operations Management** | Supply chain, logistics, production optimization, quality management |
+| 8 | **Innovation & Entrepreneurship** | Tech innovation, startup strategy, venture capital, open innovation |
+| 9 | **Human Resources** | AI & work, leadership, compensation, DEI, wellbeing, talent management |
+| 10 | **Public Economics** | Public policy, taxation, welfare economics, education economics |
+| 11 | 🆕 **Behavioral Economics** | Prospect theory, nudging, decision bias, neuroeconomics |
+| 12 | 🆕 **Labor Economics** | Unemployment, wage dynamics, labor market, immigration |
+| 13 | 🆕 **Digital Economy** | Platform economy, e-commerce, digital transformation, data economy |
+| 14 | 🆕 **ESG & Sustainability** | CSR, green finance, sustainable supply chain, climate risk |
+| 15 | 🆕 **International Business** | Cross-cultural, MNE strategy, global supply chain, foreign entry |
+| 16 | 🆕 **Health Economics** | Health policy, pharmaceutical economics, health insurance, aging |
+| 17 | 🆕 **Tourism & Hospitality** | Tourism management, hotel management, destination marketing |
+| 18 | 🆕 **Real Estate & Urban Economics** | Housing market, urban development, RE finance, smart city |
 
 ### 🚀 Quick Start
 
-1. **Find your paper** → Browse `papers/{year}/{field}/{tier}/` or use `Ctrl+F` / `GitHub Search`
-2. **Grab the citation** → Open the `.bib` file and copy the BibTeX entry into your LaTeX/BibTeX bibliography
-3. **Access the paper** → Click the DOI link in `metadata.json` to access the full text
+1. **Find your paper** → Navigate `papers/2026/{field}/{topic}/{tier}/{method}/`
+2. **Grab the citation** → Open the `.bib` file and copy into your `.bib` file
+3. **Access the paper** → Click the DOI link in `metadata.json`
 4. **Done** ✅ — Back to writing!
-
-### 📋 Research Fields Covered
-
-| Field | Topics |
-|-------|--------|
-| **Microeconomics** | Consumer theory, industrial organization, behavioral economics, game theory |
-| **Macroeconomics** | Monetary policy, economic growth, international trade, business cycles |
-| **Finance** | Corporate finance, asset pricing, derivatives, financial markets, fintech |
-| **Accounting** | Financial reporting, auditing, managerial accounting, ESG disclosure |
-| **Marketing** | Consumer behavior, digital marketing, branding, pricing strategy |
-| **Strategic Management** | Competitive strategy, corporate governance, M&A, business model innovation |
-| **Operations Management** | Supply chain management, logistics, production optimization |
-| **Innovation & Entrepreneurship** | Technology innovation, startup strategy, venture capital, open innovation |
-| **Human Resources** | Organizational behavior, leadership, labor economics, talent management |
-| **Public Economics** | Public policy, taxation, welfare economics, health economics |
 
 ### 🤝 Contributing
 
-We welcome contributions! If you have a paper to share:
-
-1. Read [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines
-2. Use the [paper template](templates/paper-template/) to format your submission
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines
+2. Use the [paper template](templates/paper-template/)
 3. Submit a Pull Request
 
 ### 📜 License
 
-This collection is released under the [MIT](LICENSE) license. Individual papers retain their original copyright.
+[MIT](LICENSE) license. Individual papers retain their original copyright.
 
 ---
 
@@ -111,85 +161,76 @@ This collection is released under the [MIT](LICENSE) license. Individual papers 
 
 ### 🎯 这是什么？
 
-**ScholarLib-EM** 是一个系统整理的**经济与管理类**开放获取论文库。每篇论文都附带可直接使用的 **BibTeX 引用**——复制、粘贴、继续写作。
-
-**不用再翻遍 Google Scholar，不用再纠结付费墙，写论文从此省心。**
+**ScholarLib-EM** 是一个系统整理的**经济与管理类**开放获取论文库。每篇论文附带可直接使用的 **BibTeX 引用**——复制、粘贴、继续写作。
 
 ### 📂 论文如何组织
 
-论文按 **年份 → 领域 → 期刊等级** 三级分类：
+**5级分类**：`年份 → 领域 → 主题 → 期刊等级 → 研究方法`
 
 ```
-papers/
-├── 2020-2025/                     # 按发表年份
-│   └── {领域}/                    # 按研究领域
-│       └── 论文名称/
-│           ├── paper-name.bib     # BibTeX 引用（直接复制使用）
-│           └── metadata.json      # 标题、作者、摘要、DOI、关键词
-│
-├── 2026/                          # 最新论文 — 增强版分类
-│   ├── human-resources/           # 人力资源管理
-│   │   ├── FT50-UTD24/           # 🏆 金融时报50本 + UTD24顶级期刊
-│   │   │   ├── ceo-pay-ratios-income-inequality-wellbeing/  # JIBS
-│   │   │   ├── generative-ai-creativity-field-experiment/   # JAP
-│   │   │   ├── passion-contagion-differentiated-theory/      # ASQ
-│   │   │   └── relationship-splintering-repair-marginalization/ # AMJ
-│   │   ├── SSCI-Q1/              # SSCI 一区期刊
-│   │   │   ├── ai-double-edged-sword-service-performance/    # JOB
-│   │   │   ├── common-good-hrm-meaningfulness-thriving/      # HRM
-│   │   │   ├── meta-analysis-flexible-working-arrangements/  # JOB
-│   │   │   ├── meta-analysis-hr-attributions-hpws/           # HRM
-│   │   │   ├── star-advantage-employee-value-ai/             # HRM
-│   │   │   └── work-family-conflict-career-outcomes/         # JVB
-│   │   ├── SCI-Q1/               # SCI 一区期刊
-│   │   ├── CSSCI/                # 中文社会科学引文索引
-│   │   └── Other-Top/            # ABS 3/4, ABDC A* 等
-│   └── ...
+papers/2026/
+├── {领域}/              # 18个研究领域
+│   ├── {主题}/          # 每个领域3-5个主题
+│   │   ├── {期刊等级}/  # 5个期刊等级
+│   │   │   ├── {方法}/  # 5种研究方法
+│   │   │   │   └── {论文}/
 ```
 
-### 🏅 期刊等级体系（2026年起）
+### 🏅 期刊等级体系
 
 | 等级 | 说明 | 代表期刊 |
 |------|------|---------|
-| **FT50-UTD24** 🏆 | 金融时报50本 + UTD 24本 | AMJ, AMR, ASQ, JAP, SMJ, JIBS, Personnel Psychology |
-| **SSCI-Q1** | SSCI 一区（社会科学引文索引） | HRM, JOB, JVB, Human Relations, Leadership Quarterly |
-| **SCI-Q1** | SCI 一区（科学引文索引） | Journal of Vocational Behavior, Work & Stress |
-| **CSSCI** | 中文社会科学引文索引 | 管理世界, 南开管理评论, 心理学报, 管理科学学报 |
+| **FT50-UTD24** 🏆 | 金融时报50本 + UTD 24本 | AMJ, AMR, ASQ, JAP, SMJ, JIBS |
+| **SSCI-Q1** | SSCI 一区 | HRM, JOB, JVB, Human Relations, LQ |
+| **SCI-Q1** | SCI 一区 | Journal of Vocational Behavior |
+| **CSSCI** | 中文社会科学引文索引 | 管理世界, 南开管理评论, 心理学报 |
 | **Other-Top** | 其他权威期刊 | ABS 3/4, ABDC A*, Scopus Q1 |
+
+### 🔬 研究方法分类
+
+| 方法 | 说明 |
+|------|------|
+| **empirical** | 实证研究（定量/定性） |
+| **theoretical** | 理论构建、概念框架 |
+| **meta-analysis** | 元分析 |
+| **review** | 文献综述、系统综述 |
+| **experimental** | 实验（实验室/现场/随机对照） |
+
+### 📋 18个研究领域
+
+| # | 领域 | 主题 |
+|---|------|------|
+| 1 | **微观经济学** | 消费者理论、产业组织、博弈论、行为实验 |
+| 2 | **宏观经济学** | 货币政策、经济增长、国际贸易、经济周期 |
+| 3 | **金融学** | 公司金融、资产定价、衍生品、金融科技、金融市场 |
+| 4 | **会计学** | 财务报告、审计、管理会计、ESG披露 |
+| 5 | **市场营销** | 消费者行为、数字营销、品牌管理、定价策略 |
+| 6 | **战略管理** | 竞争战略、公司治理、并购、商业模式创新 |
+| 7 | **运营管理** | 供应链、物流、生产优化、质量管理 |
+| 8 | **创新与创业** | 技术创新、创业策略、风险投资、开放式创新 |
+| 9 | **人力资源管理** | AI与工作、领导力、薪酬激励、DEI、员工福祉、人才管理 |
+| 10 | **公共经济学** | 公共政策、税收、福利经济学、教育经济学 |
+| 11 | 🆕 **行为经济学** | 前景理论、助推、决策偏差、神经经济学 |
+| 12 | 🆕 **劳动经济学** | 失业、工资动态、劳动力市场、移民 |
+| 13 | 🆕 **数字经济** | 平台经济、电子商务、数字化转型、数据经济 |
+| 14 | 🆕 **ESG与可持续发展** | 企业社会责任、绿色金融、可持续供应链、气候风险 |
+| 15 | 🆕 **国际商务** | 跨文化、跨国企业战略、全球供应链、海外进入 |
+| 16 | 🆕 **卫生经济学** | 卫生政策、医药经济学、健康保险、老龄化 |
+| 17 | 🆕 **旅游与酒店管理** | 旅游管理、酒店管理、目的地营销 |
+| 18 | 🆕 **房地产与城市经济学** | 住房市场、城市发展、房地产金融、智慧城市 |
 
 ### 🚀 快速使用
 
-1. **找论文** → 浏览 `papers/{年份}/{领域}/{期刊等级}/` 或使用搜索功能
-2. **取引用** → 打开 `.bib` 文件，复制 BibTeX 条目到你的参考文献库
-3. **读全文** → 点击 `metadata.json` 中的 DOI 链接访问论文全文
-4. **完成** ✅ — 继续写论文！
-
-### 📋 涵盖的研究领域
-
-| 领域 | 研究方向 |
-|------|---------|
-| **微观经济学** | 消费者理论、产业组织、行为经济学、博弈论 |
-| **宏观经济学** | 货币政策、经济增长、国际贸易、经济周期 |
-| **金融学** | 公司金融、资产定价、衍生品、金融市场、金融科技 |
-| **会计学** | 财务报告、审计、管理会计、ESG 披露 |
-| **市场营销** | 消费者行为、数字营销、品牌管理、定价策略 |
-| **战略管理** | 竞争战略、公司治理、并购、商业模式创新 |
-| **运营管理** | 供应链管理、物流、生产优化 |
-| **创新与创业** | 技术创新、创业策略、风险投资、开放式创新 |
-| **人力资源管理** | 组织行为、领导力、劳动经济学、人才管理 |
-| **公共经济学** | 公共政策、税收、福利经济学、卫生经济学 |
+1. **找论文** → `papers/2026/{领域}/{主题}/{期刊等级}/{方法}/`
+2. **取引用** → 复制 `.bib` 文件内容
+3. **读全文** → 点击 `metadata.json` 中的 DOI 链接
+4. **完成** ✅
 
 ### 🤝 参与贡献
 
-欢迎投稿！如果你有好的论文想要分享：
-
-1. 阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 了解详细指南
-2. 使用 [论文模板](templates/paper-template/) 格式化你的投稿
+1. 阅读 [CONTRIBUTING.md](CONTRIBUTING.md)
+2. 使用 [论文模板](templates/paper-template/)
 3. 提交 Pull Request
-
-### 📜 许可证
-
-本论文库采用 [MIT](LICENSE) 许可证发布。各篇论文保留其原始版权。
 
 ---
 
