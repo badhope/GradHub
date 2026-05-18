@@ -27,20 +27,34 @@
 
 ### 📂 How Papers Are Organized
 
-Papers are organized by **5 levels**: `Year → Field → Topic → Journal Tier → Method`
+Papers are organized by **6 levels**: `Year → Field → Topic → Journal Tier → Method → Industry Scenario`
 
 ```
 papers/
 ├── 2020-2025/                          # Legacy: Year → Field → Paper
 │
-├── 2026/                               # Enhanced 5-level structure
+├── 2026/                               # Enhanced 6-level structure
 │   ├── {field}/                        # 18 research fields
 │   │   ├── {topic}/                    # 3-5 topics per field
 │   │   │   ├── {journal-tier}/         # 5 journal tiers
 │   │   │   │   ├── {method}/           # 5 research methods
-│   │   │   │   │   └── {paper-name}/   # Paper entry
-│   │   │   │   │       ├── paper-name.bib
-│   │   │   │   │       └── metadata.json
+│   │   │   │   │   ├── {scenario}/     # 10 industry scenarios
+│   │   │   │   │   │   └── {paper}/   # Paper entry
+│   │   │   │   │   │       ├── paper.bib
+│   │   │   │   │   │       └── metadata.json
+│   │   │   │   │   │
+│   │   │   │   │   ├── cross-industry/              # Cross-industry
+│   │   │   │   │   ├── technology-internet/         # Tech & Internet
+│   │   │   │   │   ├── manufacturing/               # Manufacturing
+│   │   │   │   │   ├── finance-banking/             # Finance & Banking
+│   │   │   │   │   ├── healthcare-pharma/           # Healthcare & Pharma
+│   │   │   │   │   ├── education/                   # Education
+│   │   │   │   │   ├── government-public/           # Government & Public Sector
+│   │   │   │   │   ├── retail-consumer-goods/       # Retail & Consumer Goods
+│   │   │   │   │   ├── energy-utilities/            # Energy & Utilities
+│   │   │   │   │   ├── real-estate-construction/    # Real Estate & Construction
+│   │   │   │   │   ├── consulting-professional-services/  # Consulting & Professional
+│   │   │   │   │   └── agriculture-food/            # Agriculture & Food
 │   │   │   │   │
 │   │   │   │   ├── FT50-UTD24/        # 🏆 AMJ, JAP, ASQ, SMJ...
 │   │   │   │   ├── SSCI-Q1/           # HRM, JOB, JVB...
@@ -56,11 +70,14 @@ papers/
 │
 │   ├── human-resources/               # Example: most populated field
 │   │   ├── ai-work/                   # AI & Work
-│   │   │   ├── FT50-UTD24/experimental/
+│   │   │   ├── FT50-UTD24/experimental/technology-internet/
 │   │   │   │   └── generative-ai-creativity-field-experiment/  # JAP
 │   │   │   └── SSCI-Q1/empirical/
-│   │   │       ├── ai-double-edged-sword-service-performance/  # JOB
-│   │   │       └── star-advantage-employee-value-ai/           # HRM
+│   │   │       ├── technology-internet/
+│   │   │       │   ├── ai-double-edged-sword-service-performance/  # JOB
+│   │   │       │   └── star-advantage-employee-value-ai/           # HRM
+│   │   │       └── cross-industry/
+│   │   │           └── ...
 │   │   ├── leadership/                # Leadership
 │   │   ├── compensation-rewards/      # Compensation & Rewards
 │   │   ├── diversity-dei/             # Diversity, Equity & Inclusion
@@ -115,6 +132,23 @@ papers/
 | **review** | Literature reviews, systematic reviews, critical analyses |
 | **experimental** | Lab experiments, field experiments, randomized controlled trials |
 
+### 🏭 Industry Scenario Classification
+
+| Scenario | Description |
+|----------|-------------|
+| **cross-industry** | Cross-industry, generalizable findings |
+| **technology-internet** | Tech companies, internet platforms, AI, software |
+| **manufacturing** | Manufacturing, production, supply chain |
+| **finance-banking** | Banking, insurance, investment, fintech |
+| **healthcare-pharma** | Hospitals, pharma, healthcare systems |
+| **education** | Schools, universities, edtech |
+| **government-public** | Government agencies, public administration |
+| **retail-consumer-goods** | Retail, e-commerce, FMCG |
+| **energy-utilities** | Energy, oil & gas, utilities |
+| **real-estate-construction** | Real estate, construction, infrastructure |
+| **consulting-professional-services** | Consulting, law, accounting firms |
+| **agriculture-food** | Agriculture, food industry |
+
 ### 📋 Research Fields Covered (18 Fields)
 
 | # | Field | Topics |
@@ -140,7 +174,7 @@ papers/
 
 ### 🚀 Quick Start
 
-1. **Find your paper** → Navigate `papers/2026/{field}/{topic}/{tier}/{method}/`
+1. **Find your paper** → Navigate `papers/2026/{field}/{topic}/{tier}/{method}/{scenario}/`
 2. **Grab the citation** → Open the `.bib` file and copy into your `.bib` file
 3. **Access the paper** → Click the DOI link in `metadata.json`
 4. **Done** ✅ — Back to writing!
@@ -165,7 +199,7 @@ papers/
 
 ### 📂 论文如何组织
 
-**5级分类**：`年份 → 领域 → 主题 → 期刊等级 → 研究方法`
+**6级分类**：`年份 → 领域 → 主题 → 期刊等级 → 研究方法 → 应用场景`
 
 ```
 papers/2026/
@@ -173,7 +207,8 @@ papers/2026/
 │   ├── {主题}/          # 每个领域3-5个主题
 │   │   ├── {期刊等级}/  # 5个期刊等级
 │   │   │   ├── {方法}/  # 5种研究方法
-│   │   │   │   └── {论文}/
+│   │   │   │   ├── {场景}/  # 12个行业场景
+│   │   │   │   │   └── {论文}/
 ```
 
 ### 🏅 期刊等级体系
@@ -195,6 +230,23 @@ papers/2026/
 | **meta-analysis** | 元分析 |
 | **review** | 文献综述、系统综述 |
 | **experimental** | 实验（实验室/现场/随机对照） |
+
+### 🏭 行业应用场景分类
+
+| 场景 | 说明 |
+|------|------|
+| **cross-industry** | 跨行业、普适性研究 |
+| **technology-internet** | 科技公司、互联网平台、AI、软件 |
+| **manufacturing** | 制造业、生产、供应链 |
+| **finance-banking** | 银行、保险、投资、金融科技 |
+| **healthcare-pharma** | 医院、制药、医疗系统 |
+| **education** | 学校、大学、教育科技 |
+| **government-public** | 政府机构、公共管理 |
+| **retail-consumer-goods** | 零售、电商、快消品 |
+| **energy-utilities** | 能源、油气、公用事业 |
+| **real-estate-construction** | 房地产、建筑、基础设施 |
+| **consulting-professional-services** | 咨询、法律、会计师事务所 |
+| **agriculture-food** | 农业、食品行业 |
 
 ### 📋 18个研究领域
 
@@ -221,7 +273,7 @@ papers/2026/
 
 ### 🚀 快速使用
 
-1. **找论文** → `papers/2026/{领域}/{主题}/{期刊等级}/{方法}/`
+1. **找论文** → `papers/2026/{领域}/{主题}/{期刊等级}/{方法}/{场景}/`
 2. **取引用** → 复制 `.bib` 文件内容
 3. **读全文** → 点击 `metadata.json` 中的 DOI 链接
 4. **完成** ✅
